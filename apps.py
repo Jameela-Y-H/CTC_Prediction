@@ -33,7 +33,7 @@ def main():
     Role=st.selectbox("Select Role:",pd.unique(df['Role']))
     City_type=st.selectbox("Select City Type:",pd.unique(df['City type']))
     Previous_ctc=st.number_input('Previous CTC:',min_value=10000)
-    Previous_job_changes=st.number_input('Previous Job Value:',min_value=5,max_value=25)
+    Previous_job_changes=st.number_input('Previous Job Value:',min_value=0,max_value=25)
     Graduation_marks=st.number_input('Graduation Marks:',min_value=0,max_value=100)
     Exp_month=st.number_input('Experience in Months:',min_value=0)
 
