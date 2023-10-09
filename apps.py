@@ -17,8 +17,8 @@ def predict_salary(College,Role,City_type,Previous_ctc,Previous_job_changes,Grad
         new=[College,Role,City_type,Previous_ctc,Previous_job_changes,Graduation_marks,Exp_month]
         test=pd.DataFrame([new])
         test.columns=col_names
-        predicted=model.predict(test)
-        return predicted
+        model.predict(test)
+        return model.predict(test)
 def main():
 
     st.title("Salary Prediction")
@@ -40,8 +40,5 @@ def main():
     if st.button('New CTC'):
         new_sal= predict_salary(College,Role,City_type,Previous_ctc,Previous_job_changes,Graduation_marks,Exp_month)
         st.write(new_sal)
-
-
-
 if __name__ =='__main__':
 	main()
