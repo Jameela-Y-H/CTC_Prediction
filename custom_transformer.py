@@ -7,7 +7,7 @@ class commaremover(BaseEstimator,TransformerMixin):
     def fit(self,X,y=None):
         return self
     def transform(self,X,y=None):
-        if X['Previous CTC']==object:
+        if X['Previous CTC'].dtype==object:
             X['Previous CTC']=X['Previous CTC'].str.replace(",","",regex=True).astype(float)
         else:
              pass
